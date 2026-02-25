@@ -1,7 +1,13 @@
+"use client"
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import React from 'react';
 
 const Header = () => {
+    const pathname = usePathname();
+    console.log(pathname);
+    if(pathname.startsWith("/dashboard")) return <></>
+    
     return (
         <div className='p-4 border-b border-gray-300'>
             <div className='flex items-center justify-between flex-wrap'>
