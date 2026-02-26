@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
+import Navlink from './Navlink';
 
 const Header = () => {
     const pathname = usePathname();
@@ -13,15 +14,15 @@ const Header = () => {
             <div className='flex items-center justify-between flex-wrap'>
                 <Link href={'/'} className='font-bold text-3xl '>🎈Dev-Story</Link>
                 <nav className='space-x-9'>
-                    <Link href={'/about'}>About</Link>
-                    <Link href={'/stories'}>Stories</Link>
-                    <Link href={'/tutorials'}>Tutorials</Link>
-                    <Link href={'/login'}>Login</Link>
-                    <Link href={'/register'}>Register</Link>
+                    <Navlink href={'/stories'}>Stories</Navlink>
+                    <Navlink href={'/about'}>About</Navlink>
+                    <Navlink href={'/tutorials'}>Tutorials</Navlink>
+                    <Navlink href={'/login'}>Login</Navlink>
+                    <Navlink href={'/register'}>Register</Navlink>
                 </nav>
-                <Link href={'/about/contact'} className='bg-gray-200 px-5 py-3 rounded-md'>
+                <Navlink href={'/about/contact'} className='bg-gray-200 px-5 py-3 rounded-md'>
                     Contact Now
-                </Link>
+                </Navlink>
             </div>
         </div>
     );
